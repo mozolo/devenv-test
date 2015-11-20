@@ -1,0 +1,10 @@
+db:
+  image: mongo:3.0
+  ports:
+   - "127.0.0.1:27017:27017"
+api:
+  image: mozolo/3tier-api
+  ports:
+   - "127.0.0.1:5000:5000"
+  links:
+   - db
